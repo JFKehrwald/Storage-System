@@ -4,7 +4,6 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { join } from 'path';
 import { DatabaseModule } from './database/db.module';
 import { ProdutoModule } from './produto/produto.module';
-import { VendaModule } from './venda/venda.module';
 import { FuncionarioModule } from './funcionario/funcionario.module';
 
 @Module({
@@ -20,7 +19,6 @@ import { FuncionarioModule } from './funcionario/funcionario.module';
     MongooseModule.forRoot('mongodb://localhost/storage-system'),
     ProdutoModule,
     DatabaseModule,
-    VendaModule,
     FuncionarioModule
   ],
   controllers: [],

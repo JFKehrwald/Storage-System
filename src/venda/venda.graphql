@@ -1,6 +1,0 @@
-type Venda
-{
-    id: Int
-    vendedor: String
-    valor: Float
-}

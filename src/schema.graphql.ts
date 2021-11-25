@@ -71,10 +71,4 @@ export interface Produto {
     quant?: Nullable<number>;
 }
 
-export interface Venda {
-    id?: Nullable<number>;
-    vendedor?: Nullable<string>;
-    valor?: Nullable<number>;
-}
-
 type Nullable<T> = T | null;
