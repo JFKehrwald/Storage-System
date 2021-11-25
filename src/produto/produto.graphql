@@ -1,0 +1,58 @@
+type Produto
+{
+    id: Int
+    name: String
+    cost: Float
+    gain: Int
+    value: Float
+    quant: Int
+}
+
+type Query
+{
+    produtos:[Produto]
+    produto(id:ID!): Produto
+}
+
+input CreateProdutoInput
+{
+    id: Int!
+    name: String!
+    cost: Float!
+    gain: Int!
+}
+
+input UpdateProdutoInput
+{
+    id: Int!
+    name: String
+    cost: Float
+    gain: Int
+    
+}
+
+input EntradaProdutoInput
+{
+    id: Int!
+    quant: Int!
+}
+
+type Mutation 
+{
+    cadProduto(createProdutoInput:CreateProdutoInput): Produto
+}
+
+type Mutation 
+{
+    update(updateProdutoInput: UpdateProdutoInput): Produto
+}
+
+type Mutation
+{
+    Delete(id:ID!): Produto
+}
+
+type Mutation 
+{
+    Entrada(entradaProdutoInput: EntradaProdutoInput): Produto
+}

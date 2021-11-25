@@ -1,0 +1,35 @@
+type Funcionario
+{
+    id: Int
+    name: String
+    salary: Float
+    commission: Int 
+}
+
+type Query
+{
+    funcionarios:[Funcionario] 
+    funcionario(id: ID!): Funcionario
+}
+
+input CreateFuncionarioInput
+{
+    name: String!
+    salary: Float!
+    commission: Int! 
+}
+
+input UpdateFuncionarioInput
+{   
+    id: Int!
+    name: String
+    salary: Float
+    commission: Int
+}
+
+type Mutation 
+{
+    createFuncionario(createFuncionarioInput: CreateFuncionarioInput): Funcionario
+
+    updateFuncionario(updateFuncionarioInput:UpdateFuncionarioInput): Funcionario
+}
