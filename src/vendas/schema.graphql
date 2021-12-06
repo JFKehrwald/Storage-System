@@ -1,0 +1,26 @@
+enum PaymentTypeEnum
+{
+    creditoAvista
+    creditoParcelado
+    debito
+    dinheiro
+    boletoAvista
+    boletoParcelado
+
+}
+type Venda
+{
+    funcionario: String
+    itens: String
+    valor: Float
+    comission: Float
+    payment: PaymentTypeEnum
+}
+
+input CreateVendaInput
+{
+    funcionario: String!
+    itens: String!
+    valor: Float!
+    payment: PaymentTypeEnum!
+}

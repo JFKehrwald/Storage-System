@@ -7,6 +7,15 @@
 
 /* tslint:disable */
 /* eslint-disable */
+export enum PaymentTypeEnum {
+    creditoAvista = "creditoAvista",
+    creditoParcelado = "creditoParcelado",
+    debito = "debito",
+    dinheiro = "dinheiro",
+    boletoAvista = "boletoAvista",
+    boletoParcelado = "boletoParcelado"
+}
+
 export interface CreateFuncionarioInput {
     name: string;
     salary: number;
@@ -39,6 +48,13 @@ export interface EntradaProdutoInput {
     quant: number;
 }
 
+export interface CreateVendaInput {
+    funcionario: string;
+    itens: string;
+    valor: number;
+    payment: PaymentTypeEnum;
+}
+
 export interface Funcionario {
     id?: Nullable<number>;
     name?: Nullable<string>;
@@ -69,6 +85,14 @@ export interface Produto {
     gain?: Nullable<number>;
     value?: Nullable<number>;
     quant?: Nullable<number>;
+}
+
+export interface Venda {
+    funcionario?: Nullable<string>;
+    itens?: Nullable<string>;
+    valor?: Nullable<number>;
+    comission?: Nullable<number>;
+    payment?: Nullable<PaymentTypeEnum>;
 }
 
 type Nullable<T> = T | null;

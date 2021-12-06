@@ -5,6 +5,7 @@ import { join } from 'path';
 import { DatabaseModule } from './database/db.module';
 import { ProdutoModule } from './produto/produto.module';
 import { FuncionarioModule } from './funcionario/funcionario.module';
+import { VendasModule } from './vendas/vendas.module';
 
 @Module({
   imports: 
@@ -19,7 +20,8 @@ import { FuncionarioModule } from './funcionario/funcionario.module';
     MongooseModule.forRoot('mongodb://localhost/storage-system'),
     ProdutoModule,
     DatabaseModule,
-    FuncionarioModule
+    FuncionarioModule,
+    VendasModule
   ],
   controllers: [],
   providers: [],
