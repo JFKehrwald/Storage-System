@@ -1,4 +1,4 @@
-import { Model } from 'mongoose'
+import { Document, SchemaTypes } from 'mongoose'
 import { Prop, Schema, SchemaFactory} from '@nestjs/mongoose'
 import { PaymentTypeEnum } from '../../schema.graphql'
 
