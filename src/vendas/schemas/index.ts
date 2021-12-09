@@ -1,0 +1,1 @@
+export { Vendas, VendaSchema } from './vendas.schema'
