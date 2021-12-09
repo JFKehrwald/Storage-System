@@ -67,6 +67,7 @@ export interface IQuery {
     funcionario(id: string): Nullable<Funcionario> | Promise<Nullable<Funcionario>>;
     produtos(): Nullable<Nullable<Produto>[]> | Promise<Nullable<Nullable<Produto>[]>>;
     produto(id: string): Nullable<Produto> | Promise<Nullable<Produto>>;
+    vendas(): Nullable<Nullable<Venda>[]> | Promise<Nullable<Nullable<Venda>[]>>;
 }
 
 export interface IMutation {
@@ -76,6 +77,7 @@ export interface IMutation {
     update(updateProdutoInput?: Nullable<UpdateProdutoInput>): Nullable<Produto> | Promise<Nullable<Produto>>;
     Delete(id: string): Nullable<Produto> | Promise<Nullable<Produto>>;
     Entrada(entradaProdutoInput?: Nullable<EntradaProdutoInput>): Nullable<Produto> | Promise<Nullable<Produto>>;
+    createVenda(createVendaInput?: Nullable<CreateVendaInput>): Nullable<Venda> | Promise<Nullable<Venda>>;
 }
 
 export interface Produto {

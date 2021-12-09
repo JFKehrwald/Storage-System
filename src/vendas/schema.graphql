@@ -25,3 +25,12 @@ input CreateVendaInput
     valor: Float!
     payment: PaymentTypeEnum!
 }
+
+type Query
+{
+    vendas:[Venda]
+}
+type Mutation
+{
+    createVenda(createVendaInput: CreateVendaInput): Venda
+}
