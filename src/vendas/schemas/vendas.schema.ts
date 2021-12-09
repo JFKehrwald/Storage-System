@@ -6,6 +6,9 @@ import { PaymentTypeEnum } from '../../schema.graphql'
 export class Vendas extends Document
 {
     @Prop({unique: true, required: true})
+    id: number;
+
+    @Prop({required: true})
     funcionario: string;
 
     @Prop({required: true})

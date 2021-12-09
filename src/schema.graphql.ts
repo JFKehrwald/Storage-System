@@ -88,6 +88,7 @@ export interface Produto {
 }
 
 export interface Venda {
+    id?: Nullable<number>;
     funcionario?: Nullable<string>;
     itens?: Nullable<string>;
     valor?: Nullable<number>;
